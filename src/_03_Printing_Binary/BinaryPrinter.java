@@ -6,8 +6,23 @@ public class BinaryPrinter {
 	//Do not use the Integer.toBinaryString method!
 	//Don't be afraid to use the methods that are already complete to finish the others.
 	//Create a main method to test your methods.
+	int x = 0;
+	String result;
+	public static void main(String[] args) {
+		printByteBinary((byte) 4);
+	}
 	
-	public void printByteBinary(byte b) {
+	public static String printByteBinary(byte b) {
+	while (b!=0) {
+		b=(byte)(b/2);
+		x=x+1;
+	}
+	result = "1";
+	for (int i = 0; i < x; i++) {
+		result = result + "0";
+	}
+	System.out.println(result);
+	return result;
 	
 	}
 	
